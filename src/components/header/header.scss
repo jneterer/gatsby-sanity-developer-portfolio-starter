@@ -1,0 +1,116 @@
+.header-container {
+  // RESPONSIVE START
+  @apply shadow-sm;
+  @apply flex-col;
+  @apply px-3;
+  @apply h-10;
+  @apply overflow-hidden;
+  @apply transition-all;
+  @apply duration-150;
+  &.expanded {
+    @apply h-24;
+    @apply transition-all;
+    @apply duration-150;
+  }
+  // RESPONSIVE END
+  @apply fixed;
+  @apply top-0;
+  @apply right-0;
+  @apply left-0;
+  @apply bg-white;
+  @apply items-center;
+  @apply flex;
+  @apply py-4;
+  @apply z-50;
+  @screen md {
+    // RESPONSIVE OVERRIDE START
+    @apply flex-row;
+    @apply justify-between;
+    @apply px-5;
+    // RESPONSIVE OVERRIDE END
+  }
+  @screen lg {
+    // RESPONSIVE OVERRIDE START
+    @apply px-20;
+    // RESPONSIVE OVERRIDE END
+  }
+  @screen xl {
+    // RESPONSIVE OVERRIDE START
+    @apply px-64;
+    // RESPONSIVE OVERRIDE END
+  }
+  .left-menu-container {
+    // RESPONSIVE START
+    @apply mb-4;
+    @apply w-full;
+    // RESPONSIVE END
+    @apply flex;
+    @apply items-center;
+    @apply justify-between;
+    @screen md {
+      // RESPONSIVE OVERRIDE START
+      @apply m-0;
+      @apply w-auto;
+      // RESPONSIVE OVERRIDE END
+    }
+    .me-link {
+      @apply no-underline;
+      @apply text-xl;
+      &:hover {
+        @apply cursor-pointer;
+      }
+    }
+    .nav-menu-button {
+      // RESPONSIVE START
+      @apply block;
+      // RESPONSIVE END
+      @apply bg-white;
+      @apply border-blue-900;
+      @apply border-solid;
+      @apply py-2;
+      @apply px-4;
+      @apply rounded;
+      @apply transition-all;
+      @apply duration-150;
+      &.expanded {
+        @apply bg-blue-900;
+        @apply transition-all;
+        @apply duration-150;
+        svg {
+          fill: theme('colors.white');
+        }
+      }
+      @screen md {
+        // RESPONSIVE OVERRIDE START
+        @apply hidden;
+        // RESPONSIVE OVERRIDE END
+      }
+      svg {
+        @apply fill-current;
+        @apply w-4;
+        @apply h-4;
+      }
+    }
+  }
+  .nav-button {
+    @apply bg-white;
+    @apply border-none;
+    @apply py-2;
+    @apply px-4;
+    @apply rounded;
+    @apply text-blue-900;
+    @apply text-xl;
+    @apply transition-all;
+    @apply duration-150;
+    &:hover {
+      @apply bg-blue-900;
+      @apply cursor-pointer;
+      @apply text-white;
+      @apply transition-all;
+      @apply duration-150;
+    }
+    &:not(:first-child) {
+      @apply ml-2;
+    }
+  }
+}
