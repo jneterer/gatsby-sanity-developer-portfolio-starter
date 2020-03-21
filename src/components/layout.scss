@@ -620,3 +620,14 @@ pre tt:after {
     font-size: 100%;
   }
 }
+@apply bg-center;
+@screen sm {
+  a {
+    color: white;
+  }
+}
+a {
+  &:hover {
+    background: #000;
+  }
+}
