@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
@@ -18,10 +18,19 @@ export default {
       }
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
+      name: 'orderIndex',
+      title: 'Order Index',
+      type: 'number'
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text'
+    },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent'
     },
     {
       name: 'mainImage',
@@ -32,27 +41,16 @@ export default {
       }
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'tags',
+      title: 'Tags',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
-    },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent'
+      of: [{type: 'reference', to: {type: 'tag'}}]
     }
   ],
-
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
+      description: 'name',
       media: 'mainImage'
     },
     prepare(selection) {
