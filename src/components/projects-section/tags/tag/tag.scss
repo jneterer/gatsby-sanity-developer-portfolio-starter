@@ -1,0 +1,26 @@
+.tag {
+  @apply bg-white;
+  @apply border-blue-900;
+  @apply font-bold;
+  @apply mt-3;
+  @apply mr-2;
+  @apply py-2;
+  @apply px-6;
+  @apply rounded-full;
+  @apply text-blue-900;
+  @apply text-lg;
+  @apply transition-all;
+  @apply duration-150;
+  &:hover {
+    @apply bg-blue-100;
+  }
+  &.selected {
+    @apply bg-blue-900;
+    @apply text-white;
+  }
+  &:hover, &.selected {
+    @apply cursor-pointer;
+    @apply transition-all;
+    @apply duration-150;
+  }
+}

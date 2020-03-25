@@ -1,0 +1,20 @@
+.projects-section-container {
+  // RESPONSIVE START
+  @apply px-3;
+  // RESPONSIVE END
+  @screen md {
+    // RESPONSIVE OVERRIDE START
+    @apply px-5;
+    // RESPONSIVE OVERRIDE END
+  }
+  @screen lg {
+    // RESPONSIVE OVERRIDE START
+    @apply px-20;
+    // RESPONSIVE OVERRIDE END
+  }
+  @screen xl {
+    // RESPONSIVE OVERRIDE START
+    @apply px-64;
+    // RESPONSIVE OVERRIDE END
+  }
+}
