@@ -18,11 +18,6 @@ export default {
       }
     },
     {
-      name: 'orderIndex',
-      title: 'Order Index',
-      type: 'number'
-    },
-    {
       name: 'description',
       title: 'Description',
       type: 'text'

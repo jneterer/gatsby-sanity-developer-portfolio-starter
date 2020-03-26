@@ -12,6 +12,22 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'text'
+    },
+    {
+      name: 'selected',
+      title: 'Selected',
+      type: 'boolean',
+      options: {
+        layout: 'checkbox'
+      }
+    },
+    {
+      name: 'isViewAll',
+      title: 'Is View All',
+      type: 'boolean',
+      options: {
+        layout: 'checkbox'
+      }
     }
   ]
 }
