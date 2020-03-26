@@ -95,6 +95,7 @@
   .nav-button {
     @apply bg-white;
     @apply border-none;
+    @apply no-underline;
     @apply py-2;
     @apply px-4;
     @apply rounded;

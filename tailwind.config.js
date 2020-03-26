@@ -17,7 +17,12 @@ module.exports = {
       inset: {
         '18': '4.5rem',
       },
-    },
+      width: {
+       '3-10': '30%',
+       '3-4': '75%',
+       '47': '47.5%'
+      },
+    }
   },
   variants: {},
   plugins: [],

@@ -16,7 +16,7 @@ const Header = () => {
       </div>
       <div>
         <button className="nav-button">About</button>
-        <button className="nav-button">Projects</button>
+        <Link className="nav-button" to="#projects-section-container">Projects</Link>
       </div>
     </header>
   );

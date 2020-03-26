@@ -1,5 +1,5 @@
 import React, { MouseEvent, useEffect, useState } from "react";
-import { IProject } from "../../contracts/projects/iproject";
+import { IProject } from "../../contracts/projects/project/iproject";
 import { ITag } from "../../contracts/tags/tag/itag";
 import { GetAllProjects } from "../../hooks/projects/get-projects-graphql";
 import { GetTagsGraphql } from "../../hooks/tags/get-tags-graphql";
@@ -92,7 +92,8 @@ const ProjectsSection = () => {
     }));
   }, [selectedTags, viewAllSelected]);
   return (
-    <div className="projects-section-container">
+    <div id="projects-section-container" className="projects-section-container">
+      <h2>Projects</h2>
       <Tags tags={tags} toggleTagState={(event: MouseEvent, tag: ITag) => setTags(toggleTagState(event, tag, tags))} />
       <Projects projects={projects}/>
     </div>

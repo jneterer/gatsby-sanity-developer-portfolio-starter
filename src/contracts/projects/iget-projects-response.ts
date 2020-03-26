@@ -1,4 +1,4 @@
-import { IProject } from "./iproject";
+import { IProject } from "./project/iproject";
 
 export interface IGetProjectsResponse {
   allSanityProject: {

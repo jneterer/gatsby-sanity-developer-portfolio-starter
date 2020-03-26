@@ -1,6 +1,6 @@
 import React, { FunctionComponent, MouseEvent } from "react";
-import { ITagsProps } from './itags-props';
-import { ITag } from "./tag/itag";
+import { ITagsProps } from "../../../contracts/tags/itags-props";
+import { ITag } from "../../../contracts/tags/tag/itag";
 import Tag from "./tag/tag";
 import './tags.scss';
 

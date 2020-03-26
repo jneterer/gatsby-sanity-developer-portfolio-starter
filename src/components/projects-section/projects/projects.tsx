@@ -1,15 +1,15 @@
 import React, { FunctionComponent } from "react";
-import { IProject } from "../../../contracts/projects/iproject";
-import { IProjectProps } from '../../../contracts/projects/iproject-props';
+import { IProjectsProps } from '../../../contracts/projects/iprojects-props';
+import { IProject } from "../../../contracts/projects/project/iproject";
+import Project from "./project/project";
+import "./projects.scss";
 
-const Projects: FunctionComponent<IProjectProps> = ({ projects }) => {
-  return <div>
+const Projects: FunctionComponent<IProjectsProps> = ({ projects }) => {
+  return <div className="projects-container">
     {
-      projects.map((project: IProject) => {
-        return <p key={project._id}>{project.title}</p>
-      })
+      projects.map((project: IProject) => <Project key={project._id} project={{...project}} />)
     }
-  </div>;
+  </div> 
 }
 
 export default Projects

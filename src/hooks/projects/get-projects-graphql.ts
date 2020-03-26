@@ -10,9 +10,19 @@ export const GetAllProjects = () => {
             _id
             title
             description
+            slug {
+              current
+            }
             tags {
               _id
               title
+            }
+            mainImage {
+              asset {
+                fluid(maxWidth: 1200) {
+                  ...GatsbySanityImageFluid
+                }
+              }
             }
           }
         }

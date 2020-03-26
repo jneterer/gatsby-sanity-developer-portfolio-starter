@@ -1,4 +1,5 @@
 .projects-section-container {
+  @apply py-12;
   // RESPONSIVE START
   @apply px-3;
   // RESPONSIVE END
@@ -16,5 +17,11 @@
     // RESPONSIVE OVERRIDE START
     @apply px-64;
     // RESPONSIVE OVERRIDE END
+  }
+  h2 {
+    @apply m-0;
+    @apply pb-4;
+    @apply text-5xl;
+    @apply text-center;
   }
 }

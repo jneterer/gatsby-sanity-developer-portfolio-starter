@@ -1,0 +1,71 @@
+.project-card {
+  @apply no-underline;
+  @apply overflow-hidden;
+  @apply rounded;
+  @apply shadow-lg;
+  @apply w-full;
+  // Sets the top margin of project cards.
+  &:not(:first-child) {
+    @apply mt-8;
+    @screen sm {
+      @apply mt-0;
+    }
+  }
+  &:nth-child(n+3) {
+    @screen sm {
+      @apply mt-8;
+    }
+    @screen xl {
+      @apply mt-0;
+    }
+  }
+  &:nth-child(n+4) {
+    @screen xl {
+      @apply mt-12;
+    }
+  }
+  // Sets the right margin of project cards.
+  @apply mr-0;
+  &:not(:nth-child(2n)) {
+    @screen sm {
+      margin-right: 5%;
+    }
+    @screen xl {
+      @apply mr-0;
+    }
+  }
+  &:not(:nth-child(3n)) {
+    @screen xl {
+      margin-right: 5%;
+    }
+  }
+  // Width overrides.
+  @screen sm {
+    @apply w-47;
+  }
+  @screen xl {
+    @apply w-3-10;
+  }
+  .project-img {
+    @apply w-full;
+  }
+  .project-content-container {
+    .project-text-container {
+      @apply px-6;
+      @apply pt-4;
+      .project-name {
+        @apply font-bold;
+        @apply text-xl;
+        @apply mb-2;
+      }
+      .project-description {
+        @apply text-gray-700;
+        @apply text-base;
+      }
+    }
+    .project-tags-container {
+      @apply px-6;
+      @apply py-4;
+    }
+  }
+}

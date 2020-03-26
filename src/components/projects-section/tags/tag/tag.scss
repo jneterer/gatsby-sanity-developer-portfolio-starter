@@ -8,19 +8,33 @@
   @apply px-6;
   @apply rounded-full;
   @apply text-blue-900;
-  @apply text-lg;
+  @apply text-base;
   @apply transition-all;
   @apply duration-150;
-  &:hover {
+  @screen md {
+    @apply text-lg;
+  }
+  &:hover, .project-tags-container & {
     @apply bg-blue-100;
+    @apply cursor-pointer;
   }
   &.selected {
     @apply bg-blue-900;
     @apply text-white;
   }
   &:hover, &.selected {
-    @apply cursor-pointer;
     @apply transition-all;
     @apply duration-150;
+  }
+  .can-select {
+    @apply cursor-pointer;
+  }
+  .project-tags-container & {
+    @apply border-none;
+    @apply mt-2;
+    @apply mr-2;
+    @apply py-1;
+    @apply px-3;
+    @apply text-sm;
   }
 }
