@@ -22,6 +22,13 @@ module.exports = {
        '3-4': '75%',
        '47': '47.5%'
       },
+    },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1367px'
     }
   },
   variants: {},
