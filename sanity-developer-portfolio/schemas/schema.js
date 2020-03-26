@@ -3,6 +3,7 @@
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import createSchema from 'part:@sanity/base/schema-creator'
 // We import object and document schemas
+import about from './about'
 import blockContent from './blockContent'
 import project from './project'
 import tag from './tag'
@@ -16,6 +17,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    about,
     project,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
