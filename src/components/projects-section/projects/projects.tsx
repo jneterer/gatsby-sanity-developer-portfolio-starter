@@ -7,7 +7,10 @@ import "./projects.scss";
 const Projects: FunctionComponent<IProjectsProps> = ({ projects }) => {
   return <div className="projects-container">
     {
-      projects.map((project: IProject) => <Project key={project._id} project={{...project}} />)
+      projects.length > 0 ?
+        projects.map((project: IProject) => <Project key={project._id} project={{...project}} />)
+        :
+        <p className="no-results">No projects with the current set of selected tags.</p>
     }
   </div> 
 }

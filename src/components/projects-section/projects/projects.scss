@@ -1,4 +1,9 @@
 .projects-container {
   @apply flex;
   @apply flex-wrap;
+  .no-results {
+    @apply text-center;
+    @apply text-xl;
+    @apply w-full;
+  }
 }
