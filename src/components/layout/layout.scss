@@ -36,3 +36,27 @@ body {
   @apply left-0;
   @apply overflow-y-scroll;
 }
+footer {
+  @apply bg-blue-900;
+  @apply py-12;
+  @apply text-center;
+  * {
+    @apply text-white;
+  }
+  a:not(:first-child) {
+    @apply ml-8;
+  }
+  svg {
+    @apply fill-current;
+    @apply w-12;
+    @apply h-12;
+  }
+  .twitter-icon-container {
+     svg path {
+      fill: theme('colors.blue.900');
+    }
+  }
+  h2 {
+    @apply mb-0;
+  }
+}
