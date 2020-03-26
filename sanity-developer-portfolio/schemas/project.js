@@ -29,6 +29,16 @@ export default {
       of: [{type: 'block'}]
     },
     {
+      name: 'githubUrl',
+      title: 'Github Url',
+      type: 'url'
+    },
+    {
+      name: 'siteUrl',
+      title: 'Site Url',
+      type: 'url'
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
