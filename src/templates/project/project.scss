@@ -1,0 +1,93 @@
+.project-container {
+  @apply py-12;
+  @apply px-3;
+  @screen md {
+    @apply px-5;
+  }
+  @screen lg {
+    @apply px-20;
+  }
+  @screen 2xl {
+    @apply px-64;
+  }
+  .project-image {
+    @apply rounded-lg;
+    @apply shadow-2xl;
+  }
+  .project-content-container {
+    .project-heading-container {
+      @apply flex;
+      @apply flex-col;
+      @apply mt-12;
+      @apply mb-4;
+      @screen lg {
+        @apply flex-row;
+        @apply items-center;
+        @apply justify-between;
+      }
+      .project-title {
+        @apply m-0;
+        @apply text-3xl;
+        @screen sm {
+          @apply text-5xl;
+        }
+      }
+      .icons-container {
+        @apply pt-6;
+        @screen lg {
+          @apply p-0;
+        }
+        a {
+          @apply bg-blue-900;
+          @apply inline-flex;
+          @apply items-center;
+          @apply no-underline;
+          @apply py-2;
+          @apply px-4;
+          @apply rounded;
+          @apply shadow-2xl;
+          &:not(:last-child) {
+            @apply mr-4;
+          }
+          span {
+            @apply text-white;
+          }
+          svg {
+            @apply mr-3;
+            @apply w-6;
+            @apply h-6;
+            fill: white;
+          }
+        }
+      }
+    }
+    .label-content-container {
+      @apply flex;
+      @apply justify-between;
+      @apply flex-col;
+      @screen sm {
+        @apply flex-row;
+      }
+      .label-text {
+        @apply text-gray-700;
+        @apply text-lg;
+        @apply mb-0;
+        @screen sm {
+          @apply mb-4;
+        }
+      }
+      .content-text {
+        @apply text-lg;
+        @apply w-full;
+        @screen sm {
+          @apply w-85-100;
+        }
+      }
+    }
+  }
+  .project-image, .project-content-container {
+    @screen xl {
+      @apply mx-32;
+    }
+  }
+}

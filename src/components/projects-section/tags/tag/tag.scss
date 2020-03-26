@@ -15,8 +15,14 @@
     @apply text-lg;
   }
   &:hover, .project-tags-container & {
-    @apply bg-blue-100;
     @apply cursor-pointer;
+  }
+  &:hover, .project-tags-container &, .content-text & {
+    @apply bg-blue-100;
+  }
+  .content-text & {
+    @apply border-none;
+    @apply cursor-default;
   }
   &.selected {
     @apply bg-blue-900;
