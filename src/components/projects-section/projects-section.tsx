@@ -54,8 +54,14 @@ const ProjectsSection = () => {
         tag.selected = false;
         return tag;
       }
-      // and if the current tag is the tag being toggled, set its new selected state.
+      // and if the current tag is the tag being toggled...
       if (tag._id === toggledTag._id) {
+        // and if it is already selected and no other tags are selected, keep it selected
+        // and return the existing tag.
+        if (tag.selected && selectedTags.length === 1) {
+          return tag;
+        }
+        // otherwise set its new selected state.
         tag.selected = !tag.selected;
       }
       // Return the tag.
