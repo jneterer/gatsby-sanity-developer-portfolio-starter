@@ -67,18 +67,28 @@ const ProjectsSection = () => {
       // Return the tag.
       return tag;
     });
-    // Set the selected tags.
-    setSelectedTags(getSelectedTags(modifiedTags));
+    // Set the selected tags only if the view all state is false.
+    const newSelectedTags: string[] = newViewAllState ? [] : getSelectedTags(modifiedTags);
+    setSelectedTags(newSelectedTags);
+    sessionStorage.setItem('selectedTags', JSON.stringify(newSelectedTags));
     // Return the modified set of tags.
     return modifiedTags;
   }
 
   const { allSanityTag } = GetTagsGraphql();
   const { allSanityProject } = GetAllProjects();
-  const [projects, setProjects] = useState(allSanityProject.nodes);
-  const [tags, setTags] = useState(allSanityTag.nodes);
-  const [selectedTags, setSelectedTags] = useState(getSelectedTags(tags));
-  const [viewAllSelected, setViewAllSelected] = useState(true);
+  const [ projects, setProjects ] = useState(allSanityProject.nodes);
+  const sessionStorageSelectedTags: string[] = JSON.parse(sessionStorage.getItem('selectedTags'));
+  const [ tags, setTags ] = useState(sessionStorageSelectedTags?.length ? allSanityTag.nodes.map((tag: ITag) => {
+    if (sessionStorageSelectedTags.includes(tag._id)) {
+      tag.selected = true;
+    } else {
+      tag.selected = false;
+    }
+    return tag;
+  }) : allSanityTag.nodes);
+  const [ selectedTags, setSelectedTags ] = useState(sessionStorageSelectedTags?.length ? sessionStorageSelectedTags : getSelectedTags(tags));
+  const [ viewAllSelected, setViewAllSelected ] = useState(sessionStorageSelectedTags?.length ? false : true);
   // When the selected tags or the view all state has changed, filter the projects based on the selected tags.
   useEffect(() => {
     setProjects(viewAllSelected ? allSanityProject.nodes : allSanityProject.nodes.filter((project: IProject) => {
