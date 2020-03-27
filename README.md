@@ -11,20 +11,74 @@
   Gatsby + Sanity Developer Portfolio
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Get your development portfolio off the ground with this deployment-ready Gatsby + Sanity CMS Starter. This project ships with everything you need built into Gatsby and Sanity, just plug in your Sanity API credentials, commit, and deploy your Gatsby and Sanity site!
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+These instructions assume you already have a development environment set up with Gatsby and Sanity installed. If not, please follow their set up instructions here: <a href="https://www.sanity.io/docs/getting-started-with-sanity-cli">Gatsby</a> and <a href="https://www.sanity.io/docs/getting-started-with-sanity-cli">Sanity</a>.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **Clone the repository and install dependencies**
+
+    Using the command line:
+    
+    ```shell
+    # clone the repository
+    git clone https://github.com/jneterer/gatsby-sanity-developer-portfolio.git
+    # install dependencies
+    cd gatsby-sanity-developer-portfolio
+    npm install
+    cd sanity-developer-portfolio
+    npm install
+    ```
+    
+1.  **Configure Sanity**
+
+    Now you are going to set up your Sanity CMS and start its local instance.
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # ensure you're in the sanity-developer-portfolio directory
+    sanity init
+    # it might ask you if you want to override the existing configuration, type 'y' for yes
+    # name your project
+    # use the default dataset configuration: 'y' for yes
+    # start your local Sanity CMS instance
+    sanity start
+    # go to http://localhost:3333 and login
     ```
+    
+1. **Create content for your porfolio**
+
+    Here, you will create some basic content for your portfolio.
+
+    1. Go into the **About** section
+    2. Click the + sign to create a new About and fill out the fields
+        1. Title - something like: "I'm a developer!"
+        2. Description - provide a short bio about yourself, what you like to do, frameworks you use, etc.
+        3. Main Image - this can be a self portrait or any other image you want to display in your About section
+    3. Publish your new About
+    4. Go to the **Tag** section
+    5. Click the + sign to create a new Tag and fill out the fields
+        1. Title - the title of the tag, something like: "Gatsby" or "Sanity"
+        2. Description - this is a non-user facing field. Provide any description for the tag that you find helpful
+        3. Selected - you can toggle this property to set whether a tag is by default selected as a filter on the home page. This should, at a minimum, be used in conjunction with the Is View All property.
+        4. Is View All - defines whether a tag is the view all tag. Only one tag should have this property set to true.
+    6. Publish your new Tag
+    7. Go to the **Project** section
+    8. Click the + sign to create a new Project and fill out the fields
+        1. Title - the title of the project
+        2. Slug - choose generate once having provided the title. This will create a url based on the title to /project/{slug}
+        3. Description - a short description of the project. This will display on the project's card in the Projects section of the home page
+        4. Body - a long description of the project. This will display on the project's page
+        5. Github Url - the url to your project's github repo
+        6. Site Url - the url to your project's site
+        7. Main Image - a screenshot of your project. I recommend using the same size image for each project
+        8. Tags - any tags associated with the project
+    9. Publish your new Project
+        
+
+1.  **Configure Gatsby**
+
+    In this section, you are going to connect your Gatsby project with your Sanity CMS.
 
 1.  **Start developing.**
 
