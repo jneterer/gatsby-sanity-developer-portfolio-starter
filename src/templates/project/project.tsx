@@ -24,14 +24,14 @@ const Project: FunctionComponent<{data: { sanityProject: IProject }}> = ({ data 
               <div className="icons-container">
                 {
                   data.sanityProject.githubUrl && 
-                    <a href="https://github.com/gatsbyjs/gatsby" target="_blank" >
+                    <a href={data.sanityProject.githubUrl} target="_blank" >
                       <IconGithub />
                       <span>Github Repo</span>
                     </a>
                 }
                 {
                   data.sanityProject.siteUrl &&
-                    <a href="https://www.gatsbyjs.org/" target="_blank" >
+                    <a href={data.sanityProject.siteUrl} target="_blank" >
                       <IconLink />
                       <span>Visit Site</span>
                     </a>
