@@ -13,7 +13,7 @@ import "./project.scss";
 
 const Project: FunctionComponent<{data: { sanityProject: IProject }}> = ({ data }) => {
   return <Layout>
-    <SEO title={data.sanityProject.title} />
+    <SEO title={data.sanityProject.title} description={data.sanityProject.description} />
     <div className="project-container">
       <Img className="project-image" fluid={data.sanityProject.mainImage.asset.fluid} />
       <div className="project-content-container">
