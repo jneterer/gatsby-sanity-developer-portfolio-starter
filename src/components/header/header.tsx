@@ -15,8 +15,8 @@ const Header = () => {
         </button>
       </div>
       <div>
-        <Link className="nav-button" to="/#hero-container" onClick={() => setExpanded(false)} >About</Link>
-        <Link className="nav-button" to="/#projects-section-container" onClick={() => setExpanded(false)} >Projects</Link>
+        <Link className="nav-button" to="/#about" onClick={() => setExpanded(false)} >About</Link>
+        <Link className="nav-button" to="/#projects" onClick={() => setExpanded(false)} >Projects</Link>
       </div>
     </header>
   );

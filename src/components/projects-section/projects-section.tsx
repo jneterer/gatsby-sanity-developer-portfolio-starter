@@ -107,7 +107,7 @@ const ProjectsSection = () => {
     }));
   }, [selectedTags, viewAllSelected]);
   return (
-    <div id="projects-section-container" className="projects-section-container">
+    <div id="projects" className="projects-section-container">
       <h2>Projects</h2>
       <Tags tags={tags} toggleTagState={(event: MouseEvent, tag: ITag) => setTags(toggleTagState(event, tag, tags))} />
       <Projects projects={projects}/>

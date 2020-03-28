@@ -6,7 +6,7 @@ import "./hero.scss";
 
 const Hero = ({ }) => {
   const about: IAbout = GetAbout().sanityAbout;
-  return <div className="hero-container" id="hero-container" >
+  return <div className="hero-container" id="about" >
     <div className="hero-content-container">
       <div className="about-image-container">
         <Img className="about-image" fluid={about.mainImage.asset.fluid} />
