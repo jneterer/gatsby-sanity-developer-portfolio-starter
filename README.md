@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org" target="_blank">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -12,6 +11,8 @@
 </h1>
 
 Get your development portfolio off the ground with this deployment-ready Gatsby + Sanity CMS Starter. This project ships with everything you need built into Gatsby and Sanity, just plug in your Sanity API credentials, commit, and deploy your Gatsby and Sanity site!
+
+This starter also utilizes TailwindCSS, SCSS, and Typescript.
 
 ## 🚀 Quick start
 
@@ -111,7 +112,30 @@ These instructions assume you already have a development environment set up with
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-## 🧐 What's inside?
+## 🧐 What's inside and what you should know for this project
+
+    .
+    └── src
+        ├── components
+        ├── contracts
+        ├── hooks
+        ├── pages
+        └── templates
+    ├── gatsby-config.js
+    └── gatsby-node.js
+    
+1.  **`/src`**: This directory contains all of the modules of code that your project depends on.
+
+    1. **`/components`** This directory contains any components that might be reused in either a page, template, or other component.
+    2. **`/contracts`** These are typescript interface contracts that define types for graphql queries to sanity, component props, etc.
+    3. **`/hooks`** This directory contains any reusable `useStaticQuery` hooks to sanity.
+    4. **`/pages`** This directory contains any pages that are not created programmatically in our `./gatsby-node.js` file.
+    5. **`/templates`** This directory contains any templates for pages created in our `./gatsby-node.js` file.
+
+2.  **`.gatsby-config.js`**: TODO
+2.  **`.gatsby-node.js`**: TODO
+
+## Basic Gatsby information
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -164,7 +188,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
