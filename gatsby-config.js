@@ -2,8 +2,8 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Gatsby Sanity Developer Portfolio Starter`,
+    description: `Get your development portfolio off the ground with this deployment-ready Gatsby + Sanity CMS Starter.`,
     author: `@gatsbyjs`,
   },
   plugins: [
