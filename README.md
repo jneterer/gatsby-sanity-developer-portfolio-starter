@@ -79,23 +79,25 @@ These instructions assume you already have a development environment set up with
 1.  **Configure Gatsby**
 
     In this section, you are going to connect your Gatsby project with your Sanity CMS.
-
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
+    
+    1. Rename your `.env-example` file to `.env`
+    2. Replace `{your-sanity-project-id}` with your project id and `{your-dataset-name}` with your dataset name. These can both be found in the `sanity-developer-portfolio/sanity.json` file under the `api` property.
+    
+    3. Optional - set up Sanity draft previews in your Gatsby site
+        1. Login to Sanity: <a href="https://manage.sanity.io/">Login</a>
+        2. Choose your Sanity project
+        3. Go to settings > API
+        4. Scroll to Tokens and Add New Token
+        5. Give your token a label like: "Unpublished Changes Viewer" with Read permissions and Add New Token
+        6. Copy the token and replace the `{your-sanity-read-token}` with your new read token in your `.env` file
+    4. Start Gatsby!
     ```shell
-    cd my-default-starter/
     gatsby develop
     ```
-
-1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
