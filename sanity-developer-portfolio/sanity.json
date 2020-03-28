@@ -3,10 +3,6 @@
   "project": {
     "name": "sanity-developer-portfolio"
   },
-  "api": {
-    "projectId": "qoxn7nh4",
-    "dataset": "production"
-  },
   "plugins": [
     "@sanity/base",
     "@sanity/components",
