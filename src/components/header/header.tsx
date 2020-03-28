@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className={'header-container' + (expanded ? ' expanded' : '')}>
       <div className="left-menu-container">
-        <Link to="/" className="me-link">Jacob Neterer</Link>
+        <Link to="/" className="me-link">Your Name</Link>
         <button className={'nav-menu-button' + (expanded ? ' expanded' : '')} onClick={() => setExpanded(!expanded)}>
           <IconMenu />
         </button>
