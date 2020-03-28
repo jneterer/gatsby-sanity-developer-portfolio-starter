@@ -70,15 +70,20 @@ const ProjectsSection = () => {
     // Set the selected tags only if the view all state is false.
     const newSelectedTags: string[] = newViewAllState ? [] : getSelectedTags(modifiedTags);
     setSelectedTags(newSelectedTags);
-    sessionStorage.setItem('selectedTags', JSON.stringify(newSelectedTags));
+    if (isBrowser) {
+      sessionStorage.setItem('selectedTags', JSON.stringify(newSelectedTags));
+    }
     // Return the modified set of tags.
     return modifiedTags;
   }
 
+  // Check if the code is executing on the browser or server.
+  const isBrowser: boolean = typeof window !== 'undefined';
+
   const { allSanityTag } = GetTagsGraphql();
   const { allSanityProject } = GetAllProjects();
   const [ projects, setProjects ] = useState(allSanityProject.nodes);
-  const sessionStorageSelectedTags: string[] = JSON.parse(sessionStorage.getItem('selectedTags'));
+  const sessionStorageSelectedTags: string[] = isBrowser ? JSON.parse(sessionStorage.getItem('selectedTags')) : [];
   const [ tags, setTags ] = useState(sessionStorageSelectedTags?.length ? allSanityTag.nodes.map((tag: ITag) => {
     if (sessionStorageSelectedTags.includes(tag._id)) {
       tag.selected = true;
