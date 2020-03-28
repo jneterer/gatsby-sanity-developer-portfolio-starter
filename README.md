@@ -41,9 +41,21 @@ These instructions assume you already have a development environment set up with
     # it might ask you if you want to override the existing configuration, type 'y' for yes
     # name your project
     # use the default dataset configuration: 'y' for yes
+    # deploy your graphql schema
+    sanity graphql deploy
+    # you can optionally enable the graphql playground but this is not required
     # start your local Sanity CMS instance
     sanity start
     # go to http://localhost:3333 and login
+    ```
+    
+    If you want to go ahead and deploy your Sanity instance, you can do the following:
+    
+    ```shell
+    # ensure you're in the sanity-developer-portfolio directory
+    sanity deploy
+    # provide your studio host name, can be the same as your project name
+    # once Sanity has completed deploying your studio, it will give you your production sanity url
     ```
     
 1. **Create content for your porfolio**
