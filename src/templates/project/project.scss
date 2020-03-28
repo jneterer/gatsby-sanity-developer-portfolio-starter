@@ -20,16 +20,17 @@
       @apply flex-col;
       @apply mt-12;
       @apply mb-4;
-      @screen lg {
+      @screen md {
         @apply flex-row;
         @apply items-center;
         @apply justify-between;
       }
       .project-title {
         @apply m-0;
-        @apply text-3xl;
-        @screen sm {
-          @apply text-5xl;
+        @apply text-2xl;
+        @apply w-full;
+        @screen md {
+          @apply w-47;
         }
       }
       .icons-container {
