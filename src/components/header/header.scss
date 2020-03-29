@@ -2,13 +2,23 @@
   // RESPONSIVE START
   @apply shadow-sm;
   @apply flex-col;
+  @apply justify-between;
   @apply px-3;
-  @apply h-10;
   @apply overflow-hidden;
   @apply transition-all;
   @apply duration-150;
   &.expanded {
-    @apply h-24;
+    .left-menu-container {
+      @apply mb-4;
+      @apply transition-all;
+      @apply duration-150;
+    }
+    .right-menu-container {
+      @apply h-auto;
+      @apply overflow-visible;
+      @apply transition-all;
+      @apply duration-150;
+    }
     @apply transition-all;
     @apply duration-150;
   }
@@ -41,8 +51,9 @@
   }
   .left-menu-container {
     // RESPONSIVE START
-    @apply mb-4;
     @apply w-full;
+    @apply transition-all;
+    @apply duration-150;
     // RESPONSIVE END
     @apply flex;
     @apply items-center;
@@ -90,6 +101,16 @@
         @apply w-4;
         @apply h-4;
       }
+    }
+  }
+  .right-menu-container {
+    @apply h-0;
+    @apply overflow-hidden;
+    @apply transition-all;
+    @apply duration-150;
+    @screen md {
+      @apply h-auto;
+      @apply overflow-visible;
     }
   }
   .nav-button {
